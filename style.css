@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(19, 21, 25, 0.187);
+}
+.container{
+
+   
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.clock h3{
+    font-style: italic;
+    color: aliceblue;
+  
+}
+ 
+.clock{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    
+    border: 5px solid rgba(225, 225, 225, 0.25);
+    box-shadow: 0px 0px 30px rgba(57, 18, 18, 0.9);
+   background-color: radial-gradient(circle,#010202,#000d1a);
+   
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset:12px ;
+    text-align: center;
+    color: white;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+   animation-name: clock;
+   font-family: 'Segoe UI';
+
+   
+
+}
+.clock::before{
+z-index: 2;
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+ background-color: liner-gradient(#00d9ff, #ee00ff);
+
+}
+.hand{
+   
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color:var(--clr);
+    width: 4px;
+    height: 70px;
+    border-radius: 8px;
+}
